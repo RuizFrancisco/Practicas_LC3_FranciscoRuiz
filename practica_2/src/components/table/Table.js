@@ -11,6 +11,7 @@ const Table = ({ netIncomes }) => {
             <th>Ingreso Neto</th>
           </tr>
         </thead>
+
         <tbody>
           {netIncomes.map((item, index) => (
             <tr key={item + index}>

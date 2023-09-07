@@ -7,17 +7,15 @@ function App() {
     { brand: "Burger King", income: 1927361 },
     { brand: "KFC", income: 1098463 },
   ];
-
-  const totalIncome = netIncomes.reduce(
-    (total, item) => total + item.income,
-    0
-  );
-  const averageIncome = (totalIncome / netIncomes.length).toFixed(2);
+  const averageIncome = (
+    netIncomes.reduce((total, item) => total + item.income, 0) /
+    netIncomes.length
+  ).toFixed(2);
 
   return (
     <div className="App">
       <Table netIncomes={netIncomes} />
-      <br />
+
       <p>Promedio Ingreso Neto: {averageIncome}</p>
     </div>
   );
